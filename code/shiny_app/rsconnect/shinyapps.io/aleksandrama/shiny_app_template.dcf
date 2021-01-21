@@ -1,0 +1,12 @@
+name: shiny_app_template
+title: shiny_app_template
+username:
+account: aleksandrama
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3500154
+bundleId: 4125040
+url: https://aleksandrama.shinyapps.io/shiny_app_template/
+when: 1611223618.26877
+asMultiple: FALSE
+asStatic: FALSE

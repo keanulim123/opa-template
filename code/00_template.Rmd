@@ -42,7 +42,7 @@ knit:
 \def\red{\color{red}}
 
 
-```{r setup, include=FALSE} 
+```{r setup, include=FALSE, purl = FALSE} 
 # Loading required libraries
 list.of.packages <- c("tidyverse", "here", "kableExtra", "readxl","plotly",
                         "bookdown", "rootSolve","shinyBS", "shinythemes",

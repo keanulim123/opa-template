@@ -67,7 +67,7 @@ shinyUI(
                     style = "width: 100%; height: 100%; max-width: 400px;",
                     p(
                       "This visualization is one of three key components of an",
-                      tags$a(href = "http://www.bitss.org/opa/projects/deworming/", "Open Policy Analysis (OPA)"),
+                      tags$a(href = "http://www.bitss.org/opa/projects/", "Open Policy Analysis (OPA)"),
                       "on <Insert Topic>. This components are:",
                       tags$li(
                         tags$span(
@@ -75,21 +75,21 @@ shinyUI(
                         )
                       ),
                       tags$li(
-                        tags$a(href = "https://bitss-opa.github.io/opa-deworming/", "A detailed report"),
+                        tags$a(href = "https://bitss-opa.github.io/opa-template/", "A detailed report"),
                         "that describes how to obtain the final result and describes each component of the analysis"
                       ),
                       tags$li(
-                        tags$a(href = "https://github.com/BITSS-OPA/opa-deworming", "A repository"),
+                        tags$a(href = "https://github.com/BITSS-OPA/opa-template", "A repository"),
                         "that contains all the materials needed to reproduce the analysis with minimal effort (report and interactive app)."
                       ),
                     ),
                     
                     p(
                       "See a full contributors list",
-                      tags$a(href = "https://github.com/BITSS-OPA/opa-deworming/blob/master/readme.md", "here."), 
+                      tags$a(href = "https://github.com/BITSS-OPA/opa-template/blob/main/README.md", "here."), 
                       br(),
                       "See the dynamic document of this shiny app",
-                      tags$a(href = "https://bitss-opa.github.io/opa-deworming/", "here."),
+                      tags$a(href = "https://bitss-opa.github.io/opa-template/", "here."),
                       br(),
                       "See more OPA projects done by BITSS",
                       tags$a(href = "https://www.bitss.org/opa/projects/", "here.")
@@ -174,21 +174,17 @@ shinyUI(
                             conditionalPanel(
                               condition = "input.final_result == 'Main Equation' ",
                               helpText(
-                               HTML("<p><a href = 'https://bitss-opa.github.io/opa-deworming/#21_Approach_1:_Baird_et_al_(2016)'>Approach 1.1.</a> Welfare measured as additional tax revenue.<br>
-                                 - Benefits: tax revenue over predicted effect on earnings.
-                                   Data from 10 year follow-up. No externalities. <br>
-                                 - Costs: costs of treatment in Kenya in 1998 plus additional
-                                   costs due to more schooling</p>")
+                               HTML("<p><a href = 'https://bitss-opa.github.io/opa-template/#23_Approach_1:_Source_Name_(source_link)'>Approach 1</a> <br>
+                                 - Explanation for Approach 1 <br>
+                                 - More explanation for Approach 1</p>")
                               )
                             ),
                             conditionalPanel(
                               condition = "input.final_result == 'Alternative Equation' ",
                               helpText(
-                                HTML("<p><a href = 'https://bitss-opa.github.io/opa-deworming/#21_Approach_1:_Baird_et_al_(2016)'>Approach 1.2.</a> Welfare measured as additional tax revenue. <br>
-                                 - Benefits: tax revenue over predicted effect on earnings.
-                                   Data from 10 year follow-up. Including externalities. <br>
-                                 - Costs: costs of treatment in Kenya in 1998 plus additional
-                                   costs due to more schooling</p>")
+                                HTML("<p><a href = 'https://bitss-opa.github.io/opa-template/#24_Approach_2:_Source_Name_(source_link)'>Approach 2</a>  <br>
+                                 - Explanation for Approach 2 <br>
+                                 - More explanation for Approach 2</p>")
                               )
                             ),
                             # end policy estimate description ----

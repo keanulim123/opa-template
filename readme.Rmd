@@ -15,13 +15,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Open in RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BITSS-OPA/opa-template/master?urlpath=rstudio)
 
-Go straight to the Shiny app: [here](https://fhoces.shinyapps.io/shiny_app_test/)
+Go straight to the Shiny app: [here](https://aleksandrama.shinyapps.io/shiny_app_template/)
 
 This repository and its accompanying dynamic document and Shiny app are three key components of an Open Policy Analysis (OPA) on <INSERT TOPIC>. Together, these materials create a transparent and reproducible analysis to facilitate collaboration and discussion about <INSERT TOPIC>.
 
 <img align="right" width="50%" src="./code/images/OPA_layers2.svg">
 
-1 - [An interactive plot](https://fhoces.shinyapps.io/shiny_app_test/), which summarizes the interactions between all key parameters for a given set of assumptions. Materials can be found in: [`code/shiny_app`](https://github.com/BITSS-OPA/opa-template/tree/main/code/shiny_app).
+1 - [An interactive plot](https://aleksandrama.shinyapps.io/shiny_app_template/), which summarizes the interactions between all key parameters for a given set of assumptions. Materials can be found in: [`code/shiny_app`](https://github.com/BITSS-OPA/opa-template/tree/main/code/shiny_app).
 
 2 - Open policy report in the form of a [dynamic document](https://bitss-opa.github.io/opa-template/), which details all data, code, and assumptions included in the analysis. Materials can be found in: [`code/dynamic_doc`](https://github.com/BITSS-OPA/opa-template/tree/master/code/00_template.Rmd).
 

@@ -1,27 +1,4 @@
-## ----setup, include=FALSE----------------------------------------------------------------------------------------------------------------------------
-# Loading required libraries
-list.of.packages <- c("tidyverse", "here", "kableExtra", "readxl","plotly",
-                        "bookdown", "rootSolve","shinyBS", "shinythemes",
-                        "ggplot2")
-
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages, repos= "http://cran.cnr.berkeley.edu/")
-
-lapply(list.of.packages, library, character.only = TRUE)
-
-knitr::opts_knit$set(root.dir = here())
-knitr::opts_chunk$set(echo = TRUE)
-
-setwd(here())
-
-# Purl to all_analysis.R
-options(knitr.duplicate.label = "allow") # workaround for purl error
-knitr::purl("code/00_template.Rmd", "code/shiny_app/all_analysis.R")
-
-print_code <- TRUE
-
-
-## ----parameters, echo=print_code---------------------------------------------------------------------------------------------------------------------
+## ----parameters, echo=print_code----------------------------------------------
 # Do not run data set on git/github until privacy has been cleared
 ################
 ##### Data  
@@ -69,7 +46,7 @@ print_code <- TRUE
 
 
 
-## ----sources, eval = TRUE, echo=print_code, message=FALSE, warning=FALSE-----------------------------------------------------------------------------
+## ----sources, eval = TRUE, echo=print_code, message=FALSE, warning=FALSE------
 # - inputs: none
 # - outputs: all sources coming from data, research and guesswork
 chunk_sources <- function(){
@@ -129,16 +106,16 @@ chunk_sources <- function(){
 invisible(list2env(chunk_sources(),.GlobalEnv) )
 
 
-## ----------------------------------------------------------------------------------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 #my thoughts: should we forefront the conclusions before the methodology? 
 
 #Sandra: I think we should specify which approach we use to generate the graph, but keep the methodology before the conclusions. 
 
 
-## ----final-output------------------------------------------------------------------------------------------------------------------------------------
+## ----final-output-------------------------------------------------------------
 
 
-## ----test, eval=TRUE---------------------------------------------------------------------------------------------------------------------------------
+## ----test, eval=TRUE----------------------------------------------------------
 # - inputs: 
 # - outputs: 
 chunk_test <- function(){
@@ -171,7 +148,7 @@ mainequation_in <- mainequation_f()
 alternative_in <- alternative_f()
 
 
-## ----comp1,  echo=print_code, eval=TRUE--------------------------------------------------------------------------------------------------------------
+## ----comp1,  echo=print_code, eval=TRUE---------------------------------------
 # - inputs: factors of r
 # - outputs: r value
 chunk_r <- function(){
@@ -192,7 +169,7 @@ invisible( list2env(chunk_r(),.GlobalEnv) )
 
 
 
-## ----comp2,  echo=print_code, eval=TRUE--------------------------------------------------------------------------------------------------------------
+## ----comp2,  echo=print_code, eval=TRUE---------------------------------------
 # - inputs: factors of q
 # - outputs: q value
 chunk_q <- function(){
@@ -213,7 +190,7 @@ invisible( list2env(chunk_q(),.GlobalEnv) )
 
 
 
-## ----comp3,  echo=print_code, eval=TRUE--------------------------------------------------------------------------------------------------------------
+## ----comp3,  echo=print_code, eval=TRUE---------------------------------------
 # - inputs: factors of q
 # - outputs: q value
 chunk_k <- function(){
@@ -235,7 +212,7 @@ invisible( list2env(chunk_k(),.GlobalEnv) )
 
 
 
-## ----all-steps,  echo=print_code, eval = TRUE--------------------------------------------------------------------------------------------------------
+## ----all-steps,  echo=print_code, eval = TRUE---------------------------------
 #unit test function
 unit_test_f <- function(to_test_var, original_var, main_run_var = TRUE){
     if (main_run_var == TRUE) {
@@ -278,7 +255,7 @@ invisible(list2env(one_run(), .GlobalEnv))
     
 
 
-## ----main-results,  echo=print_code, eval = TRUE-----------------------------------------------------------------------------------------------------
+## ----main-results,  echo=print_code, eval = TRUE------------------------------
 # - perform the calculations to achieve final results
 
 result1 <- mainequation_f(r_final_var = r_in,
@@ -301,7 +278,7 @@ kable(results_table, caption = "Table Caption") %>%
   kable_styling("striped", full_width = F)
 
 
-## ----generate-plot-function, purl = TRUE, echo = FALSE-----------------------------------------------------------------------------------------------
+## ----generate-plot-function, purl = TRUE, echo = FALSE------------------------
 # generate_plot_f: function to generate plots for both Dynamic Document and
 # shiny app. It takes in the simulated data, policy estimate text, and rescale
 # variable. These are intermediary variables to exclude the interactivity of
@@ -384,7 +361,7 @@ return(list("generate_plot_f" = generate_plot_f))
 invisible( list2env(chunk_generate_plot(),.GlobalEnv) )
 
 
-## ----mc-setup,  echo=print_code, eval = TRUE---------------------------------------------------------------------------------------------------------
+## ----mc-setup,  echo=print_code, eval = TRUE----------------------------------
 
 sim_data1_f <- function(nsims = 1e2,
                       r_input1_var2,
@@ -458,7 +435,7 @@ policy_estimates_text <- c(
 
 
 
-## ----mc-run, dpi = 400, echo = print_code, eval = TRUE-----------------------------------------------------------------------------------------------
+## ----mc-run, dpi = 400, echo = print_code, eval = TRUE------------------------
 # Run Monte Carlo simulation for our main model
 result1_sim_all <- sim_data1_f(nsims = nsims_so, 
                       r_input1_var2 = r_input1_so,

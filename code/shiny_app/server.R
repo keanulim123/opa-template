@@ -159,7 +159,7 @@ shinyServer( function(input, output, session) {
               y = r + q - k
             \\tag{1}
             \\end{equation}
-            $$ \n See', a("Approach 1", href='https://bitss-opa.github.io/opa-deworming/#21_Approach_1:_Baird_et_al_(2016)', target = "_blank"), 'in the documentation component for more details'  )
+            $$ \n See', a("Approach 1", href='https://bitss-opa.github.io/opa-template/#23_Approach_1:_Source_Name_(source_link)', target = "_blank"), 'in the documentation component for more details'  )
         )
 
       } else if (input$final_result ==  "Alternative Equation"){
@@ -170,7 +170,7 @@ shinyServer( function(input, output, session) {
 
             \\tag{2}
             \\end{equation}
-            $$ \n See' , a("Approach 1", href="05_final_opa.html#21_Approach_1:_Baird_et_al_(2016)", target = "_blank"),  'in the documentation component for more details'  )
+            $$ \n See' , a("Approach 2", href="https://bitss-opa.github.io/opa-template/#24_Approach_2:_Source_Name_(source_link)", target = "_blank"),  'in the documentation component for more details'  )
         )
       } 
     })
@@ -179,14 +179,14 @@ shinyServer( function(input, output, session) {
 
   # Generate Plot with All Asumptions
   plotInputAll <- function(){
-    npv_all_sim <- reactive.data1()
-    plot1 <- generate_plot_f(npv_all_sim, input$final_result, input$rescale, TRUE)[[1]]
+    results_all_sim <- reactive.data1()
+    plot1 <- generate_plot_f(results_all_sim, input$final_result, input$rescale, TRUE)[[1]]
 
-    position <- generate_plot_f(npv_all_sim, input$final_result, input$rescale, TRUE)[[2]]
-    total_time_sim <- generate_plot_f(npv_all_sim, input$final_result, input$rescale, TRUE)[[3]]
+    position <- generate_plot_f(results_all_sim, input$final_result, input$rescale, TRUE)[[2]]
+    total_time_sim <- generate_plot_f(results_all_sim, input$final_result, input$rescale, TRUE)[[3]]
     plot1 <- plot1 + labs(y = NULL,
-                          x = "Net Present Value (Benefits -  Costs)" ,
-                          title = "Net Lifetime Income Effects of Deworming for Each Treated Children",
+                          x = "Main Estimate" ,
+                          title = "Project Title",
                           subtitle = paste0(policy_estimates_text[position], ". ",
                                             "N = ", input$param_num_of_sim, " simulations. Takes ",
                                             total_time_sim," ",attributes(total_time_sim)$units )  )
@@ -203,15 +203,15 @@ shinyServer( function(input, output, session) {
 
   # Generate Plot with Key Assumptions
   plotInputKA <- function(){
-    npv_all_sim <- reactive.data1()
-    output_plot <- generate_plot_f(npv_all_sim, "Main Equation", input$rescale, TRUE)
+    results_all_sim <- reactive.data1()
+    output_plot <- generate_plot_f(results_all_sim, "Main Equation", input$rescale, TRUE)
     plot1 <- output_plot[[1]]
 
     position <- output_plot[[2]]
 
     plot1 <- plot1 + labs(y = NULL,
-                          x = "Net Present Value (Benefits -  Costs)" ,
-                          title = "Net Lifetime Income Effects of Deworming for Each Treated Children",
+                          x = "Main Estimate" ,
+                          title = "Project Title",
                           subtitle = paste0(policy_estimates_text[position], ". ")
     )
   }
@@ -229,16 +229,16 @@ shinyServer( function(input, output, session) {
 
   # Generate Main Policy Estimate Plot
   output$plot1_main <- renderPlot({
-    npv_all_sim <- reactive.data1()
-    output_plot <- generate_plot_f(npv_all_sim, "Main Equation", input$rescale)
+    results_all_sim <- reactive.data1()
+    output_plot <- generate_plot_f(results_all_sim, "Main Equation", input$rescale)
     plot1 <- output_plot[[1]]
 
     position <- output_plot[[2]]
 
     plot1 <- plot1 + labs(y = NULL,
-           x = "Net Present Value (Benefits -  Costs)" ,
-           title = "Net Lifetime Income Effects of Deworming for Each Treated Children",
-           subtitle = "Distribution of the Net Present Value of Deworming Interventions"
+           x = "Main Estimate" ,
+           title = "Project Title",
+           subtitle = "Distribution of Key Indicator"
            )
     print(plot1)
   }, height = 550
