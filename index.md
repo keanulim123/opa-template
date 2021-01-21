@@ -105,7 +105,7 @@ chunk_sources <- function(){
     #############
     ##### Setup
     #############  
-    nsims_so <- 1e2
+    nsims_so <- 1e4
     policy_estimate_so <- "Main Equation"
     rescale_so <- TRUE
     #############
@@ -193,20 +193,41 @@ Introduce the starting point and the final policy estimate. Include alternative 
 
 ### Main Equation (the model)
 
+Explanation for the main equation 
+
+<details><summary>Show all the details</summary>
 \begin{equation}
 y = r + q - k
 \label{eq:1}
 \tag{1}
 \end{equation}
 
+Where: 
+
+- $y$: one-liner to define y
+- $r$: one-liner to define r
+- $k$: one-liner to define k
+
+</details>
+
+
+
 ### Alternative Equation
 
+Explanation for the alternative equation 
+
+<details><summary>Show all the details</summary>
 \begin{equation}
 y = r + q + k
 \label{eq:2}
 \tag{2}
 \end{equation}
 
+Where:
+
+- $y$: one-liner to define y
+- $r$: one-liner to define r
+- $k$: one-liner to define k
 
 
 ```r
@@ -242,17 +263,28 @@ mainequation_in <- mainequation_f()
 alternative_in <- alternative_f()
 ```
 
+
+</details>
+
 ## Sub Common Components:
 
 ### Component 1 ("$r$")
 
 This is the formula used to calculate component 1[^1]
 
+<details><summary>Show all the details</summary>
 \begin{equation}
 r = X \times \lambda_1  + (1 - X) \times \lambda_2
 \label{eq:3}
 \tag{3}
 \end{equation}
+
+Where: 
+
+- $r$: one-liner for r
+- $X$: one-liner for X
+- $\lambda_1$: one-liner for $\lambda_1$
+- $\lambda_2$: one-liner for $\lambda_2$
 
 
 ```r
@@ -274,17 +306,28 @@ chunk_r <- function(){
 
 invisible( list2env(chunk_r(),.GlobalEnv) )
 ```
+</details>
 
 ## Approach 1: Source Name (source link)
 ### Component 2 ("$q$")
 
 This is the formula used to calculate component 2[^2]
 
+<details><summary>Show all the details</summary>
 \begin{equation}
 q =  \text{input} \times \alpha_0 (1 + g)^{X}(1 + \hat{\beta_1} X + \hat{\beta_2} X^2)
 \label{eq:}
 \tag{4}
 \end{equation}
+
+Where: 
+
+- $q$: one-liner to define q
+- $\alpha_0$: one-liner to define $\alpha_0$
+- $g$: one-liner to define g
+- $\hat{\beta_1}$: one-liner to define $\hat{\beta_1}$
+- $\hat{\beta_2}$: one-liner to define $\hat{\beta_2}$
+
 
 
 ```r
@@ -306,18 +349,24 @@ chunk_q <- function(){
 
 invisible( list2env(chunk_q(),.GlobalEnv) )
 ```
+</details>
 
 ## Approach 2: Source Name (source link)
 ### Component 3 ("$k$")
 
 This is the formula used to calculate component 3[^3]
 
+<details><summary>Show all the details</summary>
 \begin{equation}
 k = R \times X  + (1 - R) \times X
 \label{eq:5}
 \tag{5}
 \end{equation}
 
+Where:
+
+- $k$: one-liner to define k
+- $R$: one-liner to define R
 
 
 
@@ -341,6 +390,7 @@ chunk_k <- function(){
 invisible( list2env(chunk_k(),.GlobalEnv) )
 ```
 
+</details>
 ## Summary of All Approaches 
 
 
@@ -355,7 +405,7 @@ Bolded row is the assumptions and the approach we use to generate the main polic
 
 
 # Main results
-
+<details><summary>Show all the details</summary>
 
 ```r
 #unit test function
@@ -398,7 +448,7 @@ one_run <-
 invisible(list2env(one_run(), .GlobalEnv))
 ```
 
-
+</details>
 
 ```r
 # - perform the calculations to achieve final results

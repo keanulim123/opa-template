@@ -1,14 +1,14 @@
 
-# Case Study on Open Policy Analysis For Project
+# Template for Open Policy Analysis on Project\_Name
 
 <img width="200" src="./code/images/BITSS_logo_horizontal.png"><img width="200" src="./code/images/CEGA_logo.png">
 <br>
 
 Open in RStudio:
-[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BITSS-OPA/opa-deworming/master?urlpath=rstudio)
+[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BITSS-OPA/opa-template/master?urlpath=rstudio)
 
 Go straight to the Shiny app:
-[![Binder](http://mybinder.org/badge_logo.svg)](https://fhoces.shinyapps.io/shiny_app_test/)
+[here](https://fhoces.shinyapps.io/shiny_app_test/)
 
 This repository and its accompanying dynamic document and Shiny app are
 three key components of an Open Policy Analysis (OPA) on <INSERT TOPIC>.
@@ -20,18 +20,18 @@ to facilitate collaboration and discussion about <INSERT TOPIC>.
 1 - [An interactive plot](https://fhoces.shinyapps.io/shiny_app_test/),
 which summarizes the interactions between all key parameters for a given
 set of assumptions. Materials can be found in:
-[`code/shiny_app`](https://github.com/BITSS-OPA/opa-deworming/tree/master/code/shiny_app).
+[`code/shiny_app`](https://github.com/BITSS-OPA/opa-template/tree/main/code/shiny_app).
 
 2 - Open policy report in the form of a [dynamic
-document](https://bitss-opa.github.io/opa-deworming/) \[replace with
-link to deworming doc\], which details all data, code, and assumptions
-included in the analysis. Materials can be found in:
-[`code/dynamic_doc`](https://github.com/BITSS-OPA/opa-deworming/tree/master/code/05_final_opa.Rmd).
+document](https://bitss-opa.github.io/opa-template/), which details all
+data, code, and assumptions included in the analysis. Materials can be
+found in:
+[`code/dynamic_doc`](https://github.com/BITSS-OPA/opa-template/tree/master/code/00_template.Rmd).
 
 3 - This Github repository, which stores all data, code, and materials
 necessary to replicate the analysis in full with minimal effort.
 
-This case study complies with the highest levels of the [Open Policy
+This project complies with the highest levels of the [Open Policy
 Analysis (OPA)
 Guidelines](https://www.bitss.org/opa/community-standards/). We also
 look to demonstrate tools, ideas, and practices through which OPA can be

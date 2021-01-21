@@ -121,7 +121,9 @@ shinyUI(
                             style = "overflow-y: scroll; width: 100%; height: 100%; position:relative;",
                             numericInput(
                               "param_r1_ka",
-                              label = h4("Parameter r1"),
+                              label = h4("Parameter r1 (\\( r_1 \\) ) ="),
+                              # for latex that needs a backslash, use two backslashes
+                              # for example: (\\( \\pi \\) ) 
                               value = r_input1_so,
                               min = 0
                             
@@ -129,7 +131,7 @@ shinyUI(
                             
                             numericInput(
                               "param_r2_ka",
-                              label = h4("Parameter r2"),
+                              label = h4("Parameter r2 (\\( r_2 \\) ) ="),
                               value = r_input2_so,
                               min = 0
                               
@@ -216,7 +218,7 @@ shinyUI(
                                 br(),
                                 numericInput(
                                   "param_q1",
-                                  label = ("Q1"),
+                                  label = ("Q1 (\\( q_1 \\) ) ="),
                                   value = q_input1_so
                                 ),
                                 bsPopover(
@@ -235,7 +237,7 @@ shinyUI(
                                 
                                 numericInput(
                                   "param_q2",
-                                  label = ("Q2 "),
+                                  label = ("Q2 (\\( q_2 \\) ) = "),
                                   value = q_input2_so
                                 ),
                                 bsPopover(
@@ -263,7 +265,7 @@ shinyUI(
                                        br(),
                                        numericInput(
                                          "param_r1",
-                                         label = "R1",
+                                         label = "R1 (\\( r_1 \\) ) =",
                                          value = r_input1_so,
                                          min = 0
                                        ),
@@ -286,7 +288,7 @@ shinyUI(
                                        )),
                                        sliderInput(
                                          "param_r2",
-                                         label = "R2 ",
+                                         label = "R2 (\\( r_2 \\) ) = ",
                                          min = r_input2_so/ 2,
                                          max = 2 * r_input2_so,
                                          value = r_input2_so
@@ -322,7 +324,7 @@ shinyUI(
                                 br(),
                                 sliderInput(
                                   "param_k1",
-                                  label = "Parameter k1=  ",
+                                  label = "Parameter k1 (\\( k_1 \\) ) =  ",
                                   min = 0.1 * k_input1_so ,
                                   max = 2 * k_input1_so,
                                   value = k_input1_so
@@ -347,7 +349,7 @@ shinyUI(
                                 
                                 numericInput(
                                   "param_k2",
-                                  label = ("Parameter k2 "),
+                                  label = ("Parameter k2 (\\( k_2 \\) ) = "),
                                   value = k_input2_so
                                 ),
                                 bsPopover(
