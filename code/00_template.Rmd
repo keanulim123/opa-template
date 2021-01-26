@@ -299,6 +299,8 @@ r = X \times \lambda_1  + (1 - X) \times \lambda_2
 \tag{3}
 \end{equation}
 
+ADD EXAMPLE ON HOW TO CITE BIBLIOGRAPHY
+
 Where: 
 
 - $r$: one-liner for r
