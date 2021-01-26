@@ -17,6 +17,8 @@ Open in RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinde
 
 Go straight to the Shiny app: [here](https://aleksandrama.shinyapps.io/shiny_app_template/)
 
+*Note:* to edit this readme file, please edit the `readme.Rmd` file and knit using RStudio. 
+
 This repository and its accompanying dynamic document and Shiny app are three key components of an Open Policy Analysis (OPA) on <INSERT TOPIC>. Together, these materials create a transparent and reproducible analysis to facilitate collaboration and discussion about <INSERT TOPIC>.
 
 <img align="right" width="50%" src="./code/images/OPA_layers2.svg">
