@@ -1,5 +1,5 @@
 # packages
-
+# do not intall on vector (sapply) as binder will produce an error
 install.packages("bookdown")
 install.packages("ggplot2")
 install.packages("gh")
