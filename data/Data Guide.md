@@ -1,5 +1,5 @@
-# Guide to Data
-This markdown file contains the kind of information typically found in a codebook accompanying a dataset, including the sources, content and format of the files in this folder
+# Data Guide
+This markdown file contains metadata on the data files within this folder including the sources, content and format of the files in this folder
 
 ## 1. _example.csv_
 

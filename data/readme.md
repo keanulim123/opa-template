@@ -1,7 +1,7 @@
-# This folder contains all of the data used for "Insert Name Here" OPA Analysis.
+# This folder contains all of the data used for **Insert Name Here** OPA Analysis.
 
 ## Original Data
-These are the original data files for "insert name here" OPA Analysis
+These are the original data files for **insert name here** OPA Analysis
 
 1. _example.csv_ : Original data from ... in csv format
 
@@ -9,7 +9,7 @@ These are the original data files for "insert name here" OPA Analysis
 
 
 ## Analysis Data
-These are the fully cleaned and processed data files used to generate the results in "insert name here" OPA Analysis
+These are processed data files used to generate the results in "insert name here" OPA Analysis
 
 1. _example2.csv_: Processed data file used for 'some type of analysis' in this OPA Project
 
