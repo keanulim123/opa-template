@@ -1,12 +1,4 @@
-# This folder contains all of the data used for **Insert Name Here** OPA Analysis.
-
-## Original Data
-These are the original data files for **insert name here** OPA Analysis
-
-1. _example.csv_ : Original data from ... in csv format
-
-2. _example.xlsx_:  Data file idential to _example.csv_, except that it has been formatted for Excel
-
+# This folder contains the processed data files used for **Insert Name Here** OPA Analysis.
 
 ## Analysis Data
 These are processed data files used to generate the results in "insert name here" OPA Analysis
